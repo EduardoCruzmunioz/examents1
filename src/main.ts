@@ -11,7 +11,6 @@ function masPesado(): Pokemon {
 
   for (let index = 1; index < pokemons.length; index++) {
     const element = pokemons[index];
-    //console.log(element);
 
     if (pokemon.weight < element.weight) pokemon = element;
   }
