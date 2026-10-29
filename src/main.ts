@@ -47,11 +47,29 @@ import("./style.css");
 
 const app = document.getElementById("app");
 if (app) {
+  let htmlPokemons = "";
+  for (let i = 0; i < pokemons.length; i++) {
+    const p = pokemons[i];
+    htmlPokemons += `
+      <div class="tarjeta-mini">
+        <img src="${p.sprites.front_default}" alt="${p.name}">
+        <p class="nombre">${p.name}</p>
+        <p>Peso: ${p.weight}</p>
+        <p>Tipo: ${p.types[0].type.name}</p>
+      </div>
+    `;
+  }
+
   app.innerHTML = `
-    <h1>Examen TypeScript - Pokemon</h1>
-    <div class="contenedor">
+    <h1>Listado de Pokemons</h1>
+    <div class="listado">
+      ${htmlPokemons}
+    </div>
+
+    <h2>Destacados por peso</h2>
+    <div class="contenedor-destacados">
       <div class="tarjeta ligero">
-        <h2>Más ligero</h2>
+        <h3>Más ligero</h3>
         <img src="${pokemonLigero.sprites.front_default}" alt="${pokemonLigero.name}">
         <p><strong>Nombre:</strong> ${pokemonLigero.name}</p>
         <p><strong>Peso:</strong> ${pokemonLigero.weight}</p>
@@ -59,7 +77,7 @@ if (app) {
       </div>
 
       <div class="tarjeta pesado">
-        <h2>Más pesado</h2>
+        <h3>Más pesado</h3>
         <img src="${pokemonPesado.sprites.front_default}" alt="${pokemonPesado.name}">
         <p><strong>Nombre:</strong> ${pokemonPesado.name}</p>
         <p><strong>Peso:</strong> ${pokemonPesado.weight}</p>

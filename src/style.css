@@ -6,40 +6,84 @@ body {
 }
 
 #app {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
 h1 {
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.contenedor {
+h2 {
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Listado de todos los Pokémon */
+.listado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tarjeta-mini {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 140px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-mini img {
+  width: 80px;
+  height: 80px;
+}
+
+.tarjeta-mini p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.tarjeta-mini .nombre {
+  font-weight: bold;
+  font-size: 14px;
+  color: #222;
+}
+
+/* Tarjetas destacadas abajo por peso */
+.contenedor-destacados {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .tarjeta {
   background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
-  width: 220px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 240px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
-.tarjeta h2 {
+.tarjeta h3 {
   margin-top: 0;
   font-size: 18px;
 }
 
 .tarjeta img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
 }
 
 .tarjeta p {
